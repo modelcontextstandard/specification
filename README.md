@@ -1,9 +1,9 @@
-# Model Context Standard – *Specification Overview*
+# Model Context Standard – *Specification*
 
-> **Status:** Draft v0.1 | **Audience:** Driver authors & SDK maintainers
->
-> This document is *language-agnostic*. Code blocks illustrate the contract in
-> pseudocode so it can be mapped 1-to-1 to Python, TypeScript, Go, ...
+**Status:** Draft v0.1 | **Audience:** Driver authors & SDK maintainers
+
+This document is *language-agnostic*. Code blocks illustrate the contract in
+pseudocode so it can be mapped 1-to-1 to Python, TypeScript, Go, ...
 
 ---
 
@@ -25,6 +25,8 @@ To enable execution, you need a parser. The parser takes the LLM’s output, ide
 > 5. Results are returned to continue the conversation
 >
 > This pattern allows LLMs to act as intelligent orchestrators using text alone. The exact format of the function description doesn't matter. What matters is that the LLM understands when and how to call a tool and how to format the output for the parser.
+
+This concept was formalized in (TALM: Tool Augmented Language Models)[http://arxiv.org/abs/2205.12255], which showed how LLMs can be extended with non-differentiable tools to solve real-world tasks.
 
 Modern AI frameworks often provide parsers, but not standardized descriptions or callable functions. This leads to a fragmented landscape of custom tooling where developers repeatedly reinvent the same logic for each application.
 
