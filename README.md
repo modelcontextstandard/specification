@@ -129,6 +129,7 @@ abstract class MCSDriver {
     process_llm_response(llm_response: string) -> any  // raw result
 }
 ```
+See [MCS Driver Contract](mcs_driver_contract.md)
 
 *The exact signatures are up to each SDK. The semantics **must** match.*
 
